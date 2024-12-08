@@ -23,6 +23,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en' suppressHydrationWarning>
+      {/* allows the body to grow to fit the screen */}
       <body className={cn('flex min-h-screen flex-col font-sans antialiased', inter.variable,playfair.variable)
        }>
       <Providers>

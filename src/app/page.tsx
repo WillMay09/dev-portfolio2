@@ -1,14 +1,17 @@
 import Header from "@/components/header";
+import Intro from "@/components/intro";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
-
+import {MDXRemote} from 'next-mdx-remote/rsc'
 export default function Home() {
+  const content = `# This is a markdown heading`
+  //defines an h1, parsing it into html
   return (
     <>
     <section className="py-24">
       <div className='container'>
-        <h1 className="text-3xl font-bold"></h1>
-        <Button>Hello there</Button>
+       <Intro />
+       <MDXRemote source={content} />
       </div>
     </section>
     </>
