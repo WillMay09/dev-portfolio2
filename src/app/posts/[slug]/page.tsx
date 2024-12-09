@@ -1,4 +1,4 @@
-import { getPostBySlug } from '@/lib/posts'
+import { getPostBySlug, getPosts } from '@/lib/posts'
 import { ArrowLeft, ArrowLeftIcon } from 'lucide-react'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
@@ -7,6 +7,13 @@ import Image from 'next/image'
 import { formatDate } from '@/lib/utils'
 import { MDXRemote } from 'next-mdx-remote/rsc'
 
+//generate all pages at build time, improve performance
+export async function generateStaticParams(){
+    const posts = await getPosts()
+    const slugs = posts.map(post =>({slug: post.slug}))
+
+    return slugs
+}
 //entry point for rendering the blog posts
 export default async function Post({ params }: { params: { slug: string } }) {
   //slug identifies the post

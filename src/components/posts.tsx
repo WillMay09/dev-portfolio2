@@ -4,7 +4,8 @@ import { PostMetadata } from '@/lib/posts'
 import { formatDate } from '@/lib/utils'
 
 export default function Posts({ posts }: { posts: PostMetadata[] }) {
-  return (
+    //Rendering of posts
+    return (
     <ul className='flex flex-col gap-8'>
       {posts.map((post) => (
         <li key={post.slug}>
