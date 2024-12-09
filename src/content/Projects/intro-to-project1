@@ -1,0 +1,21 @@
+---
+title: Introduction to MDX
+summary: MDX is a powerful tool that allows you to write JSX in your markdown
+image:
+author: 'Hamed Bahram'
+publishedAt: '2024-08-08'
+---
+
+
+
+# Welcome to my MDX page!
+ 
+This is some **bold** and _italics_ text.
+ 
+This is a list in markdown:
+ 
+- One
+- Two
+- Three
+ 
+Checkout my React component:

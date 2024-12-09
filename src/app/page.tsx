@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import {MDXRemote} from 'next-mdx-remote/rsc'
 import RecentPosts from "@/components/recent-posts";
+import RecentProjects from "@/components/recent-projects";
 export default function Home() {
   
   //defines an h1, parsing it into html
@@ -13,6 +14,7 @@ export default function Home() {
       <div className='container'>
        <Intro />
        <RecentPosts />
+       <RecentProjects/>
       </div>
     </section>
     
