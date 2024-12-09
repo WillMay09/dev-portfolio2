@@ -12,7 +12,7 @@ export default async function Post({ params }: { params: { slug: string } }) {
   //slug identifies the post
   const { slug } = params
   const post = await getPostBySlug(slug)
-    console.log(`this is the slug ${slug}`)
+    //console.log(`this is the slug ${slug}`)
   //if no post is found throw an error, render 404 page
   if (!post) {
     notFound()
@@ -21,6 +21,7 @@ export default async function Post({ params }: { params: { slug: string } }) {
   const { metadata, content } = post
   const { title, image, author, publishedAt } = metadata
   return (
+    // renders an post when clicked on
     <section className='pb-24 pt-32'>
       <div className='container max-w-3xl'>
         <Link
