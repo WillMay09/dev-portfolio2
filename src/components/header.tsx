@@ -19,7 +19,7 @@ export default function Header() {
             <Link href='/projects'>Projects</Link>
           </li>
           <li className='hover:text-forground transition-colors'>
-            <Link href='/contact'>Projects</Link>
+            <Link href='/contact'>Contact</Link>
           </li>
         </ul>
 

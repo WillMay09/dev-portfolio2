@@ -18,7 +18,7 @@ export type ProjectMetadata = {
   slug: string
 }
 
-export async function getProjectBySlug(slug: string): Promise<Post | null> {
+export async function getProjectBySlug(slug: string): Promise<Project | null> {
     try {
       const filePath = path.join(rootDirectory, `${slug}.mdx`)
       //reads file contents as a string
@@ -36,7 +36,7 @@ export async function getProjectBySlug(slug: string): Promise<Post | null> {
     }
   }
   
-  export async function getProjects(limit?: number): Promise<PostMetadata[]> {
+  export async function getProjects(limit?: number): Promise<ProjectMetadata[]> {
       //reads all the files from the root directory
     const files = fs.readdirSync(rootDirectory)
   
